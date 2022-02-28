@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Flight Ticket</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo" rel="stylesheet" />
+    <link href="{% static 'Assets/img/globe.jpg' %}" rel="icon" />
+
+</head>
+
+<body>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <div class="" style="height:280px; width:900px; margin-left:200px; margin-top:150px; border:1px solid">
+
+            <div>
+                <div style="height:40px; background-color:#4e73df; width:900px">
+                    <!--Title-->
+                    <div style="float:left; margin-top:8px; background-color:#4e73df">
+                        <label style="font-family:Heebo; color:white; font-weight:bold; font-size:18px; margin-left:30px">SEAL TRAVELS</label>
+                        <label style="font-family:Heebo; color:white; font-size:15px">Flight Ticket</label>
+                    </div>
+
+                    <!--Name-->
+                    <input name="name" value="YVONNE KUSIIMA" readonly="readonly" style="width:200px; color:white; background-color:#4e73df; font-weight:bold; font-family:Heebo; border-style:none; font-size:18px; margin-left:645px; font-weight:500; text-align:center; margin-top:-30px" />
+
+                </div>
+            </div><br /><br />
+
+            <!--Flights-->
+            <div style="float:left; margin-left:30px">
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Flight Number</label><br />
+                <input name="flightnumber" readonly="readonly" value="EK5752" style="font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <!--Travel Class-->
+            <div>
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Travel Class</label><br />
+                <input name="travelclass" readonly="readonly" value="First Class" style="font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <!--Check In-->
+            <div style="float:left; margin-left:30px">
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Check-in Opens</label><br />
+                <input name="checkin" readonly="readonly" value="4 Nov 2019, 11:30AM" style="font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <!--Status-->
+            <div>
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Status</label><br />
+                <input name="status" readonly="readonly" value="Confirmed" style="font-weight:bold; font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <!--Departure-->
+            <div style="float:left; margin-left:30px">
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Departure</label><br />
+                <input name="departure" readonly="readonly" value="4 Nov 2019, 12:00PM" style="font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <!--Arrival-->
+            <div>
+                <label style="font-size:15px; font-family:Heebo; font-weight:bold">Arrival</label><br />
+                <input name="arrival" readonly="readonly" value="4 Nov 2019, 3:00PM" style="font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+            </div>
+
+            <div style="margin-left:400px; margin-top:-180px">
+                <!--Departing From-->
+                <div>
+                    <label style="font-size:15px; font-family:Heebo; font-weight:bold">Departing From</label><br />
+                    <input name="departingfrom" readonly="readonly" value="ENTEBBE" style="width:100px; font-family:Heebo; border-style:none; font-size:20px" /><br />
+                    <input name="departureairport" readonly="readonly" value="Entebbe Airport: Terminal 1" style="width:200px; font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+                </div>
+
+                <!--Arriving At-->
+                <div>
+                    <label style="font-size:15px; font-family:Heebo; font-weight:bold">Arriving At</label><br />
+                    <input name="arrivingat" readonly="readonly" value="NAIROBI" style="width:100px; font-family:Heebo; border-style:none; font-size:20px" /><br />
+                    <input name="arrivalairport" readonly="readonly" value="Nairobi Airport: Terminal 3" style="width:200px; font-family:Heebo; border-style:none; font-size:13px" /><br /><br />
+                </div>
+            </div>
+
+            <!--Barcode Image-->
+            <div style="margin-left:600px; margin-top:-120px">
+                <img src="../Assets/flightassets/flightticketassets/img/barcodeimage.jfif" />
+            </div><br />
+
+
+            <!--Ticket Validity-->
+            <div style="margin-left:160px; margin-top:100px">
+                <i class="fa-fa fa-calendar"></i>
+                <label style="font-size:15px; text-align:center; font-family:Heebo; font-weight:bold">Ticket validity:</label>
+                <label style="font-size:13px; text-align:center; font-family:Heebo">not before 4 Nov 2019 / not after 4 Nov 2019</label>
+            </div><br /><br />
+
+            <!--Generate Tickets-->
+            <div style="">
+                <input name="generateticket" type="submit" value="Generate Ticket" style="font-family:Heebo; color:white; height:30px; width:150px; background-color:#4e73df; border:none; margin-left:350px" />
+            </div>
+        </div>
+
+    </form>
+
+</body>
+</html>

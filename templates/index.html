@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo" rel="stylesheet" />
+    <link href="{% static 'Assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'Assets/css/landing-page.css' %}" rel="stylesheet" />
+    <link href="{% static 'Assets/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'Assets/img/globe.jpg' %}" rel="icon" />
+    <link href="{% static 'Assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'Assets/css/sb-admin-2.min.css' %}" rel="stylesheet" />
+
+</head>
+<body style="font-family:Heebo">
+
+    <div class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1 style="color:#4e73df; font-family:Heebo; font-weight:700; font-size:50px">SEAL TRAVELS</h1>
+                        <h3></h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="{% url 'administratorlogin' %}" class="btn btn-default btn-lg" style="background-color:#4e73df; color:white"><span class="network-name">ADMINISTRATOR</span></a>
+                            </li>
+                            <li>
+                                <a href="{% url 'userlogin' %}" class="btn btn-default btn-lg" style="background-color:#4e73df; color:white"><span class="network-name">USER</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'Assets/js/jquery.js' %}"></script>
+    <script src="{% static 'Assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'Assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'Assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'Assets/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'Assets/js/sb-admin-2.min.js' %}"></script>
+
+</body>
+</html>
